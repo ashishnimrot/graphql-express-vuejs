@@ -104,7 +104,7 @@ const Mutations = new GraphQLObjectType({
                 age: {type: GraphQLInt},
             },
             resolve(parent, args){
-
+                console.log(args);
                 const maxAuthorId = Math.max.apply(Math, authors.map(o => o.id))
                 let author = {
                     name: args.name,
@@ -129,7 +129,7 @@ const Mutations = new GraphQLObjectType({
                 authorId: {type: GraphQLInt},
             },
             resolve(parent, args){
-
+                console.log(args);
                 const maxBookId = Math.max.apply(Math, books.map(o => o.id))
                 console.log(maxBookId)
 
